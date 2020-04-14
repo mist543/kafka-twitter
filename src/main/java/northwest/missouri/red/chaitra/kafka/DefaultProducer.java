@@ -65,7 +65,7 @@ public class DefaultProducer {
     System.out.println("\nStarting custom producer..............\n");
 
     for (int i = 1; i <= 10; i++) {
-      String message = createSentence();
+      String message = createWord();
       ProducerRecord<String, String> rec = new ProducerRecord<String, String>(topicName, message);
       producer.send(rec);
     }
@@ -92,8 +92,8 @@ public class DefaultProducer {
     producer.close();
   }
 
-  private static String createSentence() {
-    return "Noun verb subject.";
+  private static String createWord() {
+    return "Good Morning everone";
   }
 
   public static Twitter getTwitterinstance() throws IOException {
