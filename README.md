@@ -62,7 +62,7 @@ mvn clean compile assembly:single
 Start and keep running the Zookeeper service.
 
 ```PowerShell
-zkserver
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
 ```
 
 ## 2 - Start Kafka Service
